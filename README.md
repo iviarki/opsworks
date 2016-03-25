@@ -1,4 +1,4 @@
 # opsworks
 
-TODO: Enter the cookbook description here.
+This is my default cookbook for AWS OpsWorks.
 
