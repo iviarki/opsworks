@@ -1,4 +1,4 @@
 # Webserver
 
-Install httpd and create landing page.
+Install httpd, enable and start service.
 
