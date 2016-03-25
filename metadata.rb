@@ -1,0 +1,7 @@
+name 'opsworks'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures opsworks'
+long_description 'Installs/Configures opsworks'
+version '0.1.0'
