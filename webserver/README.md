@@ -1,4 +1,4 @@
-# OpsWorks
+# Webserver
 
-This is my default cookbook for AWS OpsWorks.
+Install httpd and create landing page.
 
