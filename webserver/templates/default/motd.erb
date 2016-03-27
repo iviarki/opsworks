@@ -7,21 +7,25 @@
                                                  |_|                                    
 
    ######  OpsWorks Summary  ######
-   Operating System: <%= @os_release %>
+   Operating System: <%= @instance[:os] %>
    OpsWorks Instance: <%= @instance[:hostname] %>
-   OpsWorks Instance ID: <%= @instance[:id] %>
-   OpsWorks Layers: <%= @instance[:layers].map{|id| @layers[id][:name] }.join(', ') %>
+   OpsWorks Instance ID: <%= @instance[:instance_id] %>
+   OpsWorks Layers: <%= @instance[:layer_ids].map{|layer_id| @layers[layer_id][:name] }.join(', ') %>
    OpsWorks Stack: <%= @stack[:name] %>
-<% if @instance[:region] && @instance[:availability_zone] && @instance[:aws_instance_id] -%>
-   EC2 Region: <%= @instance[:region] %>
+<% if @stack[:region] && @instance[:availability_zone] && @instance[:ec2_instance_id] && @instance[:instance_type] -%>
+   
+   EC2 Region: <%= @stack[:region] %>
    EC2 Availability Zone: <%= @instance[:availability_zone] %>
-   EC2 Instance ID: <%= @instance[:aws_instance_id] %>
+   EC2 Instance ID: <%= @instance[:ec2_instance_id] %>
+   EC2 Instance Type: <%= @instance[:instance_type] %>
 <% end -%>
-   Public IP: <%= @instance[:ip] %>
+   
+   Public IP: <%= @instance[:public_ip] %>
    Private IP: <%= @instance[:private_ip] %>
 <% if @stack[:vpc_id] && @instance[:subnet_id] -%>
    VPC ID: <%= @stack[:vpc_id] %>
    Subnet ID: <%= @instance[:subnet_id] %>
+   ################################
 <% end -%>
 
  Visit http://aws.amazon.com/opsworks for more information.
