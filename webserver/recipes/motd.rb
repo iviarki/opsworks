@@ -1,4 +1,4 @@
-include_recipe 'webserver::predicates.rb'
+include_recipe 'webserver::predicates'
 
 os_release =
   if rhel7?
