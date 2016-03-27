@@ -9,6 +9,6 @@ template "/etc/motd.opsworks-static" do
     :stack => stack['name'],
     :layers => layer['name'],
     :instance => instance['instance_id'],
-    :os_release => os_release
+    :os_release => instance['os']
   })
 end
