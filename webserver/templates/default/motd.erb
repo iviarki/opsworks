@@ -10,7 +10,7 @@
    Operating System: <%= @instance[:os] %>
    OpsWorks Instance: <%= @instance[:hostname] %>
    OpsWorks Instance ID: <%= @instance[:instance_id] %>
-   OpsWorks Layers: <%= @instance[:layer_ids].map{|layer_ids| @layers[layer_ids][:name] }.join(', ') %>
+   OpsWorks Layers: <%= @layer_names %>
    OpsWorks Stack: <%= @stack[:name] %>
 <% if @stack[:region] && @instance[:availability_zone] && @instance[:ec2_instance_id] && @instance[:instance_type] -%>
    
