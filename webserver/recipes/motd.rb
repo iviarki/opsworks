@@ -6,7 +6,7 @@ template "/etc/motd.opsworks-static" do
   variables({
     :stack => search("aws_opsworks_stack").first,
     :layers => search("aws_opsworks_layer").first,
-    :layer_names => instance[:layer_ids].map{|my_layer_ids| search(:aws_opsworks_layers, "layer_id:#{my_layer_id}").first}.join(', '),
+    :layer_names => instance[:layer_ids].map{|my_layer_ids| search(:aws_opsworks_layers, "layer_id:#{my_layer_ids}").first}.join(', '),
     :instance => instance
   })
 end
