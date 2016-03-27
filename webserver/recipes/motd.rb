@@ -3,7 +3,7 @@ template "/etc/motd.opsworks-static" do
   mode "0644"
   variables({
     :stack => search("aws_opsworks_stack").first,
-    :layers => earch("aws_opsworks_layer").first,
+    :layers => search("aws_opsworks_layer").first,
     :instance => search("aws_opsworks_instance", "self:true").first
   })
 end
